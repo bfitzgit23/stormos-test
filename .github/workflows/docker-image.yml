@@ -24,7 +24,7 @@ jobs:
 
       # Build the Docker image
       - name: Build the Docker image
-        run: docker build . --file Dockerfile --tag my-image-name:latest
+        run: docker build . --file Dockerfile --tag archlinux:latest
 
       # Run the Docker container (optional)
       - name: Run the Docker container
