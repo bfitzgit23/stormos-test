@@ -27,7 +27,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: sudo apt update 
+        run: sudo apt update && sudo apt install docker
 
 
       # Runs a set of commands using the runners shell
