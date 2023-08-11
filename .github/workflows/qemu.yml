@@ -7,6 +7,15 @@ jobs:
   qemu:
     runs-on: ubuntu-latest
     steps:
-      -
-        name: Set up QEMU
+      - name: Set up QEMU
         uses: docker/setup-qemu-action@v2
+
+      - name: Download Arch Linux ISO
+        run: |
+          wget https://mirror.rackspace.com/archlinux/iso/latest/archlinux-x86_64.iso
+        # Replace '<version>' with the actual version you want to download
+
+      - name: Start QEMU with Arch Linux ISO
+        run: |
+          qemu-system-x86_64 -m 2G -cdrom archlinux-x86_64.iso -boot d
+        # Replace '<version>' with the actual version you downloaded
