@@ -33,4 +33,5 @@ jobs:
       - name: Run a multi-line script
         run: |
           sudo apt install docker -y
-          docker pull archlinux:latest /bin/sh
+          docker pull archlinux
+          docker run -it --rm archlinux /bin/bash -c "echo 'Running inside Arch Linux container' && exec /bin/bash"
