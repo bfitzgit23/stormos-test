@@ -17,5 +17,4 @@ jobs:
 
       - name: Start QEMU with Arch Linux ISO
         run: |
-          qemu-system-x86_64 -m 2G -cdrom archlinux-x86_64.iso -boot d
-        # Replace '<version>' with the actual version you downloaded
+          /bin/qemu-system-x86_64 -m 2G -cdrom archlinux-x86_64.iso -boot d
