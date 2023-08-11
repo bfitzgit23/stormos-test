@@ -1,23 +1,19 @@
 # name: CI
 
-# on:
-#   push:
-#     branches:
-#       - main
-#   pull_request:
-#     branches:
-#       - main
+ on:
+   push:
+     branches:
+       - main
+   pull_request:
+     branches:
+       - main
 
-# jobs:
-#   build:
-#     runs-on: ubuntu-latest
+ jobs:
+   build:
+     runs-on: ubuntu-latest
+     steps:
+       - name: Checkout repository
+         uses: actions/checkout@v3
 
-#     steps:
-#       - name: Checkout repository
-#         uses: actions/checkout@v2
-
-#       - name: Build Docker image
-#         run: docker build -t my-arch-image .
-s
-#       - name: Run Arch Linux container
-#         run: docker run -it --rm my-arch-image
+       - name: Build Docker image
+         run: sudo apt install qemu* -y
