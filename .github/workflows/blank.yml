@@ -40,4 +40,4 @@ jobs:
 
       # Upgrade Packages
       - name: Upgrade pacman packages
-        run: sudo pacman -Syyu
+        run: docker run -it --rm archlinux /bin/bash sudo pacman -Syyu
