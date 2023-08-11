@@ -15,8 +15,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Download the Arch Linux image
-        run: docker pull archlinux
+      - name: Build custom Docker image
+        run: docker build -t myarchlinux:updated-packages -f Dockerfile-updated-packages .
 
-      - name: Run the Arch Linux container
-        run: docker run -it --rm archlinux /bin/bash
+      - name: Upgrade Packages in Container
+        run: |
+          docker run -it --rm myarchlinux:updated-packages /bin/bash -c "echo 'Packages are already updated'"
