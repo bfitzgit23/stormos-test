@@ -15,5 +15,12 @@
        - name: Checkout repository
          uses: actions/checkout@v3
 
-       - name: Build Docker image
-         run: sudo apt install qemu
+       - name: Part 1
+         run: sudo apt install qemu   -y
+
+       - name: Part 2
+         run: sudo apt install docker -y
+
+
+       - name: Part 3
+         run: sudo docker build -t archiso-builder .
