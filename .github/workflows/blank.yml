@@ -16,4 +16,4 @@
          uses: actions/checkout@v3
 
        - name: Build Docker image
-         run: sudo apt install qemu* -y
+         run: sudo apt install qemu
