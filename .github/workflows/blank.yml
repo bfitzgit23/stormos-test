@@ -36,3 +36,8 @@ jobs:
       # Runs a single command using the runners shell
       - name: Runs the archlinux image
         run: docker run archlinux
+
+
+      # Upgrade Packages
+      - name: Upgrade pacman packages
+        run: sudo pacman -Syyu
