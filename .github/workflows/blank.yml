@@ -28,3 +28,11 @@ jobs:
       # Runs a single command using the runners shell
       - name: Download the archlinux image
         run: docker pull archlinux
+
+
+      # Runs the archlinux docker image 
+      - uses: actions/checkout@v3
+
+      # Runs a single command using the runners shell
+      - name: Runs the archlinux image
+        run: docker run archlinux
