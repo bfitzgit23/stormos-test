@@ -12,9 +12,9 @@ jobs:
 
       - name: Download Arch Linux ISO
         run: |
-          wget https://mirror.rackspace.com/archlinux/iso/latest/archlinux-x86_64.iso
+          wget https://releases.ubuntu.com/22.04.3/ubuntu-22.04.3-desktop-amd64.iso
         # Replace '<version>' with the actual version you want to download
 
       - name: Start QEMU with Arch Linux ISO
         run: |
-          /bin/qemu-system-x86_64 -m 2G -cdrom archlinux-x86_64.iso -boot d
+          qemu-system-x86_64 ubuntu-22.04.3-desktop-amd64.iso -m 2G -cdrom 
