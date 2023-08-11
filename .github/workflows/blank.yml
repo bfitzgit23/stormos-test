@@ -33,5 +33,4 @@ jobs:
       - name: Run a multi-line script
         run: |
           sudo apt install docker -y
-          docker pull archlinux:latest
-          docker run archlinux:latest
+          docker pull archlinux:latest /bin/sh
