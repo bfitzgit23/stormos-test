@@ -2,7 +2,7 @@
 FROM archlinux
 
 # Update and install necessary packages
-RUN pacman -Syu --noconfirm && pacman -S archiso --noconfirm && pacman -S git --noconfirm && pacman -S base-devel
+RUN pacman -Syu --noconfirm && pacman -S archiso --noconfirm && pacman -S git --noconfirm && pacman -S base-devel && mkarchiso
 
 # Set a default command to run when the container starts
 CMD ["/bin/bash"]
